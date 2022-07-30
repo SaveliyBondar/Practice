@@ -4,3 +4,5 @@ numpy
 matplotlib
 sklearn
 ipykernel
+pandas
+jupyterlab
