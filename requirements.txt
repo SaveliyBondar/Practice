@@ -6,3 +6,4 @@ sklearn
 ipykernel
 pandas
 jupyterlab
+nbclient
