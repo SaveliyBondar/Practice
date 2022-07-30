@@ -1,24 +1,28 @@
 name: TitanicAction
+
 on:
-   schedule:
-     - cron: "12 * * * *"
+  [ push ]
+
 jobs:
+
   build:
+
     runs-on: ubuntu-latest
+
     steps:
-    - id: repo
-      name: Repo Checkout
-    - uses: actions/checkout@v2
+      - id: repo
+        name: Repo Checkout
+      - uses: actions/checkout@v2
 
-    - id: python
-    - name: Setup Python
-      uses: actions/setup-python@v2
-      with:
-        python-version: '3.9'
-        cache: 'pip'
-    - run: pip install -r requirements.txt
+      - id: python
+      - name: Setup Python
+        uses: actions/setup-python@v2
+        with:
+          python-version: '3.9'
+          cache: 'pip'
+      - run: pip install -r requirements.txt
 
-    - id: Titanic
-      name: Executing Jupyter Notebook
-    - run: jupyter execute TitanicML.ipynb
-    shell: bash
+      - id: Titanic
+        name: Executing Jupyter Notebook
+      - run: jupyter execute TitanicML.ipynb
+      shell: bash
