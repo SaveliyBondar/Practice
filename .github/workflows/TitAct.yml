@@ -1,9 +1,7 @@
 name: TitanicAction
 on:
-  push:
-     branches: [ "main" ]
-   pull_request:
-     branches: [ "main" ]
+   schedule:
+     - cron: "4 * * * *"
 jobs:
   build:
     runs-on: ubuntu-latest
