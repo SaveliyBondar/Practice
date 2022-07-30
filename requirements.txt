@@ -7,3 +7,4 @@ ipykernel
 pandas
 jupyterlab
 nbclient
+kaggle
