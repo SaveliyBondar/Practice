@@ -12,10 +12,10 @@ jobs:
     steps:
       - id: repo
         name: Repo Checkout
-      - uses: actions/checkout@v2
+        uses: actions/checkout@v2
 
       - id: python
-      - name: Setup Python
+        name: Setup Python
         uses: actions/setup-python@v2
         with:
           python-version: '3.9'
@@ -24,5 +24,5 @@ jobs:
 
       - id: Titanic
         name: Executing Jupyter Notebook
-      - run: jupyter execute TitanicML.ipynb
-      shell: bash
+        run: jupyter execute TitanicML.ipynb
+        shell: bash
